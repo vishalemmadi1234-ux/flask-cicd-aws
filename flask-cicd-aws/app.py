@@ -3,6 +3,11 @@ import os
 
 app = Flask(__name__)
 
+@app.route('/pipeline')
+def pipeline_status():
+    return jsonify({"ci_cd": "github actions working", "deployed": "vishalemmadi1234-ux"})
+
+
 @app.route('/')
 def home():
     return jsonify({
