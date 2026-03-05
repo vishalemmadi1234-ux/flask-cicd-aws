@@ -1,4 +1,3 @@
-
 import pytest
 from app import app
 
@@ -11,9 +10,10 @@ def client():
 def test_home(client):
     rv = client.get('/')
     assert rv.status_code == 200
-    assert b"Flask CI/CD Pipeline Demo" in rv.data
+    assert b"Terraform Edition" in rv.data
 
 def test_health(client):
     rv = client.get('/health')
     assert rv.status_code == 200
     assert b"healthy" in rv.data
+

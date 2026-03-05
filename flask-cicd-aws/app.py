@@ -1,4 +1,3 @@
-
 from flask import Flask, jsonify
 import os
 
@@ -7,9 +6,9 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return jsonify({
-        "message": "Flask CI/CD Pipeline Demo",
-        "status": "Deployed on AWS EC2 via GitHub Actions",
-        "version": os.getenv('APP_VERSION', '1.0.0')
+        "message": "Flask CI/CD Pipeline Demo - Terraform Edition",
+        "status": "Deployed on AWS EC2 via GitHub Actions + Terraform",
+        "version": os.getenv('APP_VERSION', '2.0.0')
     })
 
 @app.route('/health')
@@ -19,3 +18,4 @@ def health():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
+
