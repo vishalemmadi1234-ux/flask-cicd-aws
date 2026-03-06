@@ -1,16 +1,10 @@
-name: CI/CD Pipeline with Terraform
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  workflow_dispatch:
+name: CI/CD Test
+on: [push, workflow_dispatch]
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - run: echo "✅ Tests passed!"
-#new line
-# another new line
+    - run: echo "✅ Pipeline SUCCESS!"
+
 
