@@ -17,4 +17,7 @@ def test_health(client):
     assert rv.status_code == 200
     assert b"healthy" in rv.data
 
+def test_somke():
+    assert True
+
 
