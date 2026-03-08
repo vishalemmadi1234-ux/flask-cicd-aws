@@ -1,4 +1,4 @@
-name: Dcoker Flask CI/CD
+name: Docker Flask CI/CD
 on:
   push:
     branches: [main]
@@ -10,7 +10,7 @@ jobs:
     - name: Build Docker image
       run: docker build -t flask-app .
     - name: Run tests in Docker
-      run: docker run flask-app pytest tests/ -v
+      run: docker run flask-app python -m pytest tests/ -v
 
 
 
