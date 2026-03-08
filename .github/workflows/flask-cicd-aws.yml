@@ -1,7 +1,7 @@
 name: Dcoker Flask CI/CD
 on:
     push:
-        branches:[ main ]
+        branches: [ main ]
 jobs:
     test:
         runs-on: ubuntu-latest
